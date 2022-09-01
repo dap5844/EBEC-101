@@ -33,10 +33,9 @@ Academic Integrity Statement:
 
 
 def main():
-    Hello_Prompt = input("What is your name? ") #This part of the code creates an input and asks the user to enter their name
+    Hello_Prompt = input("What is your name? ") #Asks the user for their name
 
-    print(f"Hello {Hello_Prompt}!") #Code prints the phrase as " 'Hello ' Hello_Prompt'!' "
-    #In the print function above, it uses a f-string printing format, to more easily add the promt from the user
+    print(f"Hello {Hello_Prompt}!") #Code prints the phrase as " 'Hello ' Hello_Prompt'!' using a f-string printing format
 
 
 """Do not change anything below this line."""
