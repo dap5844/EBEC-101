@@ -40,7 +40,7 @@ def main():
     Sugar = "{:,.2f}".format(quant*1.50/48)
     Flour = "{:,.2f}".format(quant*2.50/48)
     Quant = "{:,}".format(quant)
-    print(f"To make {Quant} cookies, you will need: \n{Butter:>10s} cups of butter\n{Sugar:>10s} cups of sugar\n{Flour:>10s} cups of flour\n")
+    print(f"To make {Quant} cookies, you will need: \n {Butter:>10s} cups of butter\n {Sugar:>10s} cups of sugar\n {Flour:>10s} cups of flour\n")
 """Do not change anything below this line."""
 if __name__ == "__main__":
     main()
