@@ -39,7 +39,7 @@ def main():
     #Quantity between 1 and 3
     elif qty > 0 and qty < 4:
         fprice = "{:,.2f}".format(qty*price)
-        print(f"  No discount applied.\n  The total price to purchase {qty} packages is ${fprice}")
+        print(f"\tNo discount applied.\n\tThe total price to purchase {qty} packages is ${fprice}")
     
     #10% disc
     elif qty >= 4 and qty <= 39:
