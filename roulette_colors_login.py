@@ -29,35 +29,35 @@ Academic Integrity Statement:
 
 
 def main():
-    num = int(input("Please choose a pocket number: ")) #Get the quantity purchased 
+    num = int(input("Please choose a pocket number: ")) #Pick the number 
     
-    #Quantity less than 0 or greater than 36
+    #Num less than 0 or greater than 36
     if num < 0 or num > 36:
         print("  Invalid Input!")
     
     elif num == 0:
         print(f"  Pocket number {num} is green.")
 
-    #Quantity between 1 and 10
+    #Num btw 1 and 10
     elif num >= 1 and num <= 10:
             if (num % 2) == 0:
                 print(f"  Pocket number {num} is black.")
             else:
                 print(f"  Pocket number {num} is red.")
-    #Quantity between 11 and 18
+
     elif num >= 11 and num <= 18:
             if (num % 2) == 0:
                 print(f"  Pocket number {num} is red.")
             else:
                 print(f"  Pocket number {num} is black.")
-    #Quantity between 19 and 28
+
     elif num >= 19 and num <= 28:
             if (num % 2) == 0:
                 print(f"  Pocket number {num} is black.")
             else:
                 print(f"  Pocket number {num} is red.")
-    #Quantity between 29 and 36
-    elif num >29 and num <= 36:
+
+    elif num >=29 and num <= 36:
             if (num % 2) == 0:
                 print(f"  Pocket number {num} is red.")
             else:
