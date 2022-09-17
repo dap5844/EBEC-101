@@ -31,10 +31,9 @@ Academic Integrity Statement:
 def main():
     year = int(input("Enter a year: ")) #Get the year from the user
     
-    #Check if it's divisible by 100 to verify if it's a century
-    #Check if it's also divisible by 400 
+    #Check if it's divisible by 100 and 400 
     if (year % 400 == 0) and (year % 100 == 0):
-    #print(f"The year {year} is a leap year.\nFebruary of {year} has 29 days.")
+ 
         print("The year {0} is a leap year.\nFebruary of {0} has 29 days.".format(year))
 
     #Check if it's divisible by 4 and it's not a century
