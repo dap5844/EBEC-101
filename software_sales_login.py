@@ -56,7 +56,7 @@ def main():
     #42%
     elif qty >= 1000:
         fprice = "{:,.2f}".format(qty*price*0.58)
-        print(f"  42% discount applied.\n  The total price to purchase {qty} packages is ${fprice}")
+        print(f"  42% discount applied.\n  The total price to purchase {qty} packages is ${fprice}.")
 
 
 """Do not change anything below this line."""
