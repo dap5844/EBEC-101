@@ -34,29 +34,29 @@ def main():
     
     #Quantity less than 0
     if qty < 0:
-        print("Invalid Input!")
+        print("  Invalid Input!")
 
     #Quantity between 1 and 3
     elif qty > 0 and qty < 4:
         fprice = "{:,.2f}".format(qty*price)
-        print(f"No discount applied.\nThe total price to purchase {qty} packages is ${fprice}")
+        print(f"  No discount applied.\n  The total price to purchase {qty} packages is ${fprice}")
     
     #10% disc
     elif qty >= 4 and qty <= 39:
         fprice = "{:,.2f}".format(qty*price*0.9)
-        print(f"10% discount applied..\nThe total price to purchase {qty} packages is ${fprice}")
+        print(f"  10% discount applied.\n  The total price to purchase {qty} packages is ${fprice}")
     #15%
     elif qty >= 40 and qty <= 199:
         fprice = "{:,.2f}".format(qty*price*0.85)
-        print(f"15% discount applied.\nThe total price to purchase {qty} packages is ${fprice}")
+        print(f"  15% discount applied.\n  The total price to purchase {qty} packages is ${fprice}")
     #30%
     elif qty >= 200 and qty <= 999:
         fprice = "{:,.2f}".format(qty*price*0.7)
-        print(f"30% discount applied.\nThe total price to purchase {qty} packages is ${fprice}")
+        print(f"  30% discount applied.\n  The total price to purchase {qty} packages is ${fprice}")
     #42%
     elif qty >= 1000:
         fprice = "{:,.2f}".format(qty*price*0.58)
-        print(f"42% discount applied.\nThe total price to purchase {qty} packages is ${fprice}")
+        print(f"  42% discount applied.\n  The total price to purchase {qty} packages is ${fprice}")
 
 
 """Do not change anything below this line."""
