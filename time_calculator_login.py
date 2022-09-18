@@ -32,7 +32,7 @@ def main():
     num = int(input("Please enter a time in seconds: ")) #Get the amount of seconds 
     time =  "{:,}".format(num)
     #Time less than 1 min
-    if num > 0 and num < 60:
+    if num >= 0 and num < 60:
         print(f"  {time} seconds is less than one minute.")
     #Time less than 1 hour
     elif num >= 60 and num < 3600:
