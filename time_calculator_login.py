@@ -40,9 +40,9 @@ def main():
         num = num - mins*60
         secs = num % 60
         if mins != 0 and secs != 0:
-            print(f"  {time} seconds equals {mins} minutes(s) and {secs} second(s).")
+            print(f"  {time} seconds equals {mins} minute(s) and {secs} second(s).")
         elif mins !=0 and secs == 0:
-            print(f"  {time} seconds equals {mins} minutes(s).")
+            print(f"  {time} seconds equals {mins} minute(s).")
         
     elif num >= 3600 and num < 86400:
 
@@ -56,7 +56,7 @@ def main():
         elif mins == 0 and secs != 0:
             print(f"  {time} seconds equals {hours} hour(s) and {secs} second(s).")
         elif mins != 0  and secs == 0:
-            print(f"  {time} seconds equals {hours} hour(s) and {mins} minutes(s).")
+            print(f"  {time} seconds equals {hours} hour(s) and {mins} minute(s).")
         elif mins == 0  and secs == 0:
             print(f"  {time} seconds equals {hours} hour(s).")
 
@@ -81,7 +81,7 @@ def main():
         elif hours == 0 and mins == 0 and secs != 0:  
             print(f"  {time} seconds equals {days} day(s) and {secs} second(s).")
         elif hours == 0 and mins != 0 and secs == 0:
-            print(f"  {time} seconds equals {days} day(s) and {mins} minutes(s).")
+            print(f"  {time} seconds equals {days} day(s) and {mins} minute(s).")
         elif hours == 0  and mins == 0  and secs == 0:
             print(f"  {time} seconds equals {days} day(s).")
 
