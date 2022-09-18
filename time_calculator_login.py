@@ -31,10 +31,10 @@ Academic Integrity Statement:
 def main():
     num = int(input("Please enter a time in seconds: ")) #Get the amount of seconds 
     time =  "{:,}".format(num)
-
+    #Time less than 1 min
     if num > 0 and num < 60:
         print(f"  {time} seconds is less than one minute.")
-
+    #Time less than 1 hour
     elif num >= 60 and num < 3600:
         mins = num // 60
         num = num - mins*60
@@ -43,7 +43,7 @@ def main():
             print(f"  {time} seconds equals {mins} minute(s) and {secs} second(s).")
         elif mins !=0 and secs == 0:
             print(f"  {time} seconds equals {mins} minute(s).")
-        
+    #Time less than 1 day    
     elif num >= 3600 and num < 86400:
 
         hours = num // 3600
@@ -59,7 +59,7 @@ def main():
             print(f"  {time} seconds equals {hours} hour(s) and {mins} minute(s).")
         elif mins == 0  and secs == 0:
             print(f"  {time} seconds equals {hours} hour(s).")
-
+    #Time of 1 day and above
     elif num >= 86400:
         days = num // 86400
         num = num - days*86400
@@ -75,7 +75,7 @@ def main():
         elif hours != 0 and mins == 0 and secs == 0:
             print(f"  {time} seconds equals {days} day(s) and {hours} hour(s).")    
         elif hours != 0 and mins == 0 and secs != 0:  
-            print(f"  {time} seconds equals {days} day(s), {hours} hour(s)  and {secs} second(s).")
+            print(f"  {time} seconds equals {days} day(s), {hours} hour(s) and {secs} second(s).")
         elif hours == 0 and mins != 0 and secs != 0:
             print(f"  {time} seconds equals {days} day(s), {mins} minute(s) and {secs} second(s).")
         elif hours == 0 and mins == 0 and secs != 0:  
