@@ -47,6 +47,8 @@ def main():
         AVG = round(avg, 3)
         print(f'  You entered {num} numbers.')
         print(f'  Their sum is {SUM} and their average is {AVG}.')
+    elif num <= 0:
+        print(f"  You didn't enter any numbers.")
 
 """Do not change anything below this line."""
 if __name__ == "__main__":
