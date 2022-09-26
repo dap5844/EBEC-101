@@ -33,18 +33,20 @@ def main():
     count = 0 # init
     sum = 0 # init
     num = 0 # init
-    while True: # check
+    while True: # Start while loop to loop until the if statemente below is no longer true
         count = float(input("Enter a non-negative number (negative to quit): ")) #Enter a non-negative number
-        if count < 0:
+        if count < 0: #Verify that the number is greater than 0
             break
         else:
             sum += count
             num += 1
     
-    if num > 0:
-        avg = sum/(num) 
+    if num > 0: #if the first entry is negative nothing happens, else it calculates avg and sum
+        avg = sum/num
+        SUM = round(sum, 3)
+        AVG = round(avg, 3)
         print(f'  You entered {num} numbers.')
-        print(f'  Their sum is {sum} and their average is: {avg}.')
+        print(f'  Their sum is {SUM} and their average is {AVG}.')
 
 """Do not change anything below this line."""
 if __name__ == "__main__":
