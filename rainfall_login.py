@@ -3,7 +3,7 @@ Author: Daniel Perez, perez294@purdue.edu
 Assignment: 03.3 - Rainfall
 Date: 09/26/2022
 Description:
-    This program calculates the total and average rainfall over a period of years the user assigns.
+    This program adds all the non-negative values and calcualtes the average. It stops once the user provides a negative number.
 Contributors:
     None, Stackflow
 My contributor(s) helped me:
@@ -27,7 +27,6 @@ Academic Integrity Statement:
 
 """Write new functions below this line (starting with unit 4)."""
 
-
 def main():
 
     months = ['Jan.','Feb.','Mar.','Apr.','May.','Jun.','Jul.','Aug.','Sep.','Oct.','Nov.','Dec.']
@@ -37,20 +36,24 @@ def main():
     avg = 0
     years = 0
     year = int(input("Enter the number of years: "))
-    for years in range(year):
-        print(f"  For year No. {years+1}")
-        while j <= 11:
-            rain = float(input(f"    Enter the rainfall for {months[j]}: "))
-            #print(f"The month is {months[j]}.")
-            if rain < 0:
-                print('    Invalid input; rainfall cannot be negative.')
-            else:
-                j += 1
-                total += rain
-    avg = total/(year*j)
-    print(f"There are {year*j} months.")
-    print(f"The total rainfall was {total:.2f} inches.")
-    print(f"The monthly average rainfall was {avg:.2f} inches.")
+    if year == 0:
+        print(f"Invalid input; years must be greater than 0.")
+    else:
+        for years in range(year):
+            print(f"  For year No. {years+1}")
+            while j <= 11:
+                rain = float(input(f"    Enter the rainfall for {months[j]}: "))
+                #print(f"The month is {months[j]}.")
+                if rain < 0:
+                    print('    Invalid input; rainfall cannot be negative.')
+                else:
+                    j += 1
+                    total += rain
+            j = 0
+        avg = total/(year*(len(months)))
+        print(f"There are {year*(len(months))} months.")
+        print(f"The total rainfall was {total:.2f} inches.")
+        print(f"The monthly average rainfall was {avg:.2f} inches.")
 
 """Do not change anything below this line."""
 if __name__ == "__main__":
