@@ -1,9 +1,9 @@
 """
 Author: Daniel Perez, perez294@purdue.edu
-Assignment: 03.1 - Sum Average
+Assignment: 03.3 - Rainfall
 Date: 09/26/2022
 Description:
-    This program adds all the non-negative values and calcualtes the average. It stops once the user provides a negative number.
+    This program calculates the total and average rainfall over a period of years the user assigns.
 Contributors:
     None, Stackflow
 My contributor(s) helped me:
@@ -33,25 +33,20 @@ def main():
     months = ['Jan.','Feb.','Mar.','Apr.','May.','Jun.','Jul.','Aug.','Sep.','Oct.','Nov.','Dec.']
     count = 1 #Initiate number of years
     j = 0
-    month = 0 #Initiate months
-    monthly = 0
     total = 0
     avg = 0
     years = 0
     year = int(input("Enter the number of years: "))
     for years in range(year):
-        for count in range(months):
-            print(f"  For year No. {count}")
-            while j <= 11:
-                rain = float(input(f"    Enter the rainfall for {months[j]}: "))
-                #print(f"The month is {months[j]}.")
-                if rain < 0:
-                    print('    Invalid input; rainfall cannot be negative.')
-                else:
-                    j += 1
-                    total += rain
-            count += 1
-        years += 1
+        print(f"  For year No. {years+1}")
+        while j <= 11:
+            rain = float(input(f"    Enter the rainfall for {months[j]}: "))
+            #print(f"The month is {months[j]}.")
+            if rain < 0:
+                print('    Invalid input; rainfall cannot be negative.')
+            else:
+                j += 1
+                total += rain
     avg = total/(year*j)
     print(f"There are {year*j} months.")
     print(f"The total rainfall was {total:.2f} inches.")
