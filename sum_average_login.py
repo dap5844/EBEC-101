@@ -46,7 +46,7 @@ def main():
         SUM = round(sum, 3)
         AVG = round(avg, 3)
         print(f'  You entered {num} numbers.')
-        print(f'  Their sum is {SUM} and their average is {AVG}.')
+        print(f'  Their sum is {SUM:.3f} and their average is {AVG:.3f}.')
     elif num <= 0:
         print(f"  You didn't enter any numbers.")
 
