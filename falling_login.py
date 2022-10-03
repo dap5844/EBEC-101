@@ -27,7 +27,8 @@ Academic Integrity Statement:
 
 """Write new functions below this line (starting with unit 4)."""
 
-def falling_dist(g,t):
+def falling_dist(t):
+    g = 8.87
     d = 0.5*(g*(t**2))
     return d
 
@@ -37,7 +38,7 @@ def main():
     i = 0
     print(f"Time (s)\tDistance (m)")
     for i in range(len(time)):
-        d=falling_dist(g = 8.87, t = time[i])
+        d=falling_dist(time[i])
         print(f"   {time[i]}\t\t   {d:.1f}")
 
 """Do not change anything below this line."""
