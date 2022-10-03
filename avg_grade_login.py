@@ -28,7 +28,7 @@ Academic Integrity Statement:
 
 """Write new functions below this line (starting with unit 4)."""
 
-def determine_grade(grade):
+def determine_grade(grade): #This code takes the score and returns a letter grade
 
     if grade >= 92 and grade <= 100:
         letter = "A"
@@ -42,12 +42,13 @@ def determine_grade(grade):
         letter = "F"
     return letter
 
-def get_valid_score():
+def get_valid_score(): #This code prompts the user for a score. If it's less than 0 or greater than 100, it'll ask again.
+                       #Once a valid score is found, it'll return that score and print it's letter grade
     score = -1
     grade = 0
-    while score < 0 or score >= 100:
+    while score < 0 or score > 100:
         score = float(input(f"Enter a score: "))
-        if score < 0 or score >= 100:
+        if score < 0 or score > 100:
             print(f"  Invalid Input. Please try again.")
         else:
             letter = determine_grade(score)
@@ -56,21 +57,25 @@ def get_valid_score():
     return score
     
 def calc_average(grades):
-    avg = grades / 5
+    sum = 0
+    for i in range(0,len(grades)):
+        grade = grades[i]
+        sum += grade
+    avg = sum / (len(grades))
     return avg
 
 def main():
 
-    sum = 0
+    sum = []
     for i in range(0,5):
         grades = get_valid_score()
-        sum += grades
+        sum += [grades]
         determine_grade(grades)
     
     avg = calc_average(sum)
     letter = determine_grade(avg)
     print(f"\nResults:\nThe average score is {avg:.2f}.")
-    print(f"The letter grade for {avg:.2f} is {letter}")
+    print(f"   The letter grade for {avg:.2f} is {letter}")
 
 
 """Do not change anything below this line."""
