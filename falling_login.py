@@ -29,17 +29,19 @@ Academic Integrity Statement:
 
 def falling_dist(t):
     g = 8.87
-    d = 0.5*(g*(t**2))
+    d = 0.5*(g*(t**2)) #This function calculates the distance per given falling time
     return d
 
 def main():
 
-    time = [5,10,15,20,25,30,35,40,45,50]
+    time = [5,10,15,20,25,30,35,40,45,50] #Split input time
     i = 0
     print(f"Time (s)\tDistance (m)")
+    print('─ ' * 15)
     for i in range(len(time)):
-        d=falling_dist(time[i])
-        print(f"   {time[i]}\t\t   {d:.1f}")
+        d=falling_dist(time[i]) #call falling_dist function and calculate distance for given time
+        D = "{:.1f}".format(d) #format with 1 decimal point
+        print(f"   {time[i]:>4}\t\t   {D:>4}")
 
 """Do not change anything below this line."""
 if __name__ == "__main__":
