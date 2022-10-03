@@ -31,15 +31,15 @@ Academic Integrity Statement:
 def determine_grade(grade):
 
     if grade >= 92 and grade <= 100:
-        print(f"The letter grade for {grade:.1f} is A.")
+        print(f"  The letter grade for {grade:.1f} is A.")
     elif grade >= 82 and grade < 92:
-        print(f"The letter grade for {grade:.1f} is B.")
+        print(f"  The letter grade for {grade:.1f} is B.")
     elif grade >= 73 and grade < 82:
-        print(f"The letter grade for {grade:.1f} is C.")
+        print(f"  The letter grade for {grade:.1f} is C.")
     elif grade >= 64 and grade < 73:
-        print(f"The letter grade for {grade:.1f} is D.")
+        print(f"  The letter grade for {grade:.1f} is D.")
     elif grade >= 0 and grade < 64:
-        print(f"The letter grade for {grade:.1f} is F.")
+        print(f"  The letter grade for {grade:.1f} is F.")
     return
 
 def get_valid_score():
