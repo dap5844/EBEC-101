@@ -47,17 +47,17 @@ def lucky_sum(a,b):
                 k = i
                 print(k)
                 sum += k
-    return sum
+    if integ_2%3 != 0:
+        SUM = sum + integ_2
+    else:
+        SUM = sum
+    return SUM
         
 def main():
 
     integ_1 = int(input("Enter the first integer: "))
     integ_2 = int(input("Enter the second integer: "))
-    sum = lucky_sum(integ_1,integ_2)
-    if integ_2%3 != 0:
-        SUM = sum + integ_2
-    else:
-        SUM = sum
+    SUM = lucky_sum(integ_1,integ_2)
     print(f"The sum of the lucky numbers is {SUM:,.0f}.")
     
 """Do not change anything below this line."""
