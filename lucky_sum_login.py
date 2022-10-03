@@ -45,7 +45,13 @@ def lucky_sum(a,b):
             if i%3 != 0: #check if the number in the for loop is not divisible by 3 to add it
                 k = i
                 sum += k
-    if integ_2%3 != 0: #check if the 2nd integer is not divisible by 3 to add it to the sum
+    if integ_2 > 0 and integ_2%3 != 0: #check if the 2nd integer is not divisible by 3 to add it to the sum
+        SUM = sum + integ_2
+    elif integ_1 > 0  and integ_1%3 !=0:
+        SUM = sum + integ_1
+    elif integ_1 <0 and integ_1%3 != 0:
+        SUM = sum + integ_1
+    elif integ_2 <0 and integ_2%3 !=0:
         SUM = sum + integ_2
     else:
         SUM = sum
