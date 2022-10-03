@@ -31,16 +31,16 @@ Academic Integrity Statement:
 def determine_grade(grade):
 
     if grade >= 92 and grade <= 100:
-        print(f"  The letter grade for {grade:.1f} is A.")
+        letter = "A"
     elif grade >= 82 and grade < 92:
-        print(f"  The letter grade for {grade:.1f} is B.")
+        letter = "B"
     elif grade >= 73 and grade < 82:
-        print(f"  The letter grade for {grade:.1f} is C.")
+        letter = "C"
     elif grade >= 64 and grade < 73:
-        print(f"  The letter grade for {grade:.1f} is D.")
+        letter = "D"
     elif grade >= 0 and grade < 64:
-        print(f"  The letter grade for {grade:.1f} is F.")
-    return
+        letter = "F"
+    return letter
 
 def get_valid_score():
     score = -1
@@ -48,8 +48,10 @@ def get_valid_score():
     while score < 0 or score >= 100:
         score = float(input(f"Enter a score: "))
         if score < 0 or score >= 100:
-            print(f"Invalid Input. Please try again.")
+            print(f"  Invalid Input. Please try again.")
         else:
+            letter = determine_grade(score)
+            print(f"  The letter grade for {score:.1f} is {letter}.")
             break
     return score
     
@@ -66,8 +68,10 @@ def main():
         determine_grade(grades)
     
     avg = calc_average(sum)
+    letter = determine_grade(avg)
     print(f"\nResults:\nThe average score is {avg:.2f}.")
-    determine_grade(avg)
+    print(f"The letter grade for {avg:.2f} is {letter}")
+
 
 """Do not change anything below this line."""
 if __name__ == "__main__":
