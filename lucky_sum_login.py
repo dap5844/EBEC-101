@@ -38,14 +38,14 @@ def lucky_sum(a,b):
         for i in range(integ_1,integ_2):
             if i%3 != 0:
                 k = i
-                print(k)
+                #print(k)
                 sum += k
     elif integ_2 < integ_1:
         i = integ_2
         for i in range(integ_2,integ_1):
             if i%3 != 0:
                 k = i
-                print(k)
+                #print(k)
                 sum += k
     if integ_2%3 != 0:
         SUM = sum + integ_2
@@ -63,4 +63,3 @@ def main():
 """Do not change anything below this line."""
 if __name__ == "__main__":
     main()
-
