@@ -46,7 +46,7 @@ def get_valid_score():
     score = -1
     grade = 0
     while score < 0 or score >= 100:
-        score = int(input(f"Enter a score: "))
+        score = float(input(f"Enter a score: "))
         if score < 0 or score >= 100:
             print(f"Invalid Input. Please try again.")
         else:
