@@ -75,7 +75,7 @@ def main():
     
     avg = calc_average(sum)
     letter = determine_grade(avg)
-    print(f"\nResults:\nThe average score is {avg:.2f}.")
+    print(f"\nResults:\n  The average score is {avg:.2f}.")
     print(f"  The letter grade for {avg:.2f} is {letter}")
 
 
