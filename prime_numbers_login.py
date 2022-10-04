@@ -36,12 +36,7 @@ def is_prime(num): #This code determines whether a number is prime or not
                 flag = True
                 break
 
-    # check if flag is True
-    if flag:
-        print(f"  {num} is not a prime.")
-    else:
-        print(f"  {num} is a prime!")
-    return
+    return flag
 
 def main():
 
@@ -53,7 +48,12 @@ def main():
         elif num == 0:
             print(f"Enter a positive integer. Try again.")
         else:
-            is_prime(num)
+            flag = is_prime(num)
+            # check if flag is True
+            if flag:
+                print(f"  {num} is not a prime.")
+            else:
+                print(f"  {num} is a prime!")
         
 """Do not change anything below this line."""
 if __name__ == "__main__":
