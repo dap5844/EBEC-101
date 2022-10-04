@@ -47,7 +47,8 @@ def get_valid_score(): #This code prompts the user for a score. If it's less tha
     score = -1
     grade = 0
     while score < 0 or score > 100:
-        score = float(input(f"Enter a score: "))
+        scoresh = float(input(f"Enter a score: "))
+        score = round(scoresh, 2)
         if score < 0 or score > 100:
             print(f"  Invalid Input. Please try again.")
         else:
@@ -75,7 +76,7 @@ def main():
     avg = calc_average(sum)
     letter = determine_grade(avg)
     print(f"\nResults:\nThe average score is {avg:.2f}.")
-    print(f"   The letter grade for {avg:.2f} is {letter}")
+    print(f"  The letter grade for {avg:.2f} is {letter}")
 
 
 """Do not change anything below this line."""
