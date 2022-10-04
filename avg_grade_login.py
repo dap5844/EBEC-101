@@ -1,6 +1,6 @@
 """
 Author: Daniel Perez, perez294@purdue.edu
-Assignment: 04.3 - Average Grade
+Assignment: 04.3 - Avg Grade
 Date: 10/3/2022
 Description:
     This program asks for the user for 5 grades and outputs the average grade along with it's letter value.
